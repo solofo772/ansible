@@ -1,0 +1,6 @@
+- name: création du répertoire /tmp/xavki
+  file:
+    path: /home/solofo/TOKAGASY
+    state: directory
+    owner: solofo
+  become: true

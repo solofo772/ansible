@@ -1,0 +1,15 @@
+version: '3'
+services:
+  ansible2:
+    image: solofonore/ansible
+    environment:
+      - DISPLAY=${DISPLAY}
+    stdin_open: true
+    tty: true
+    restart: "no"
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    devices:
+      - /dev/snd  # Cela dépendra de l'accès requis aux périphériques sur votre hôte
+    cap_add:
+      - SYS_ADMIN  # Cela dépendra des autorisations requises sur votre hôte

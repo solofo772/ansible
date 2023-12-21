@@ -1,0 +1,6 @@
+- name: copy
+  copy:
+    src: "/home/oliver/teste.txt"
+    dest: "/home/heriniaina/solofo/monfichier.txt"
+    mode: "0755"
+    owner: "solofo" 

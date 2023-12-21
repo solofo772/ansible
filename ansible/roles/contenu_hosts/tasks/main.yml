@@ -1,0 +1,12 @@
+- name: Afficher le contenu de /etc/hosts
+  command: cat /etc/hosts
+  register: hosts_content
+
+- name: Afficher le contenu du fichier hosts
+  debug:
+    var: hosts_content.stdout_lines
+
+- name: "Execute IP Check"
+  command: ifconfig
+  register: command_output
+- debug : var=command_output
